@@ -1,3 +1,6 @@
+# graph_ui_2024
+Building a Graph UI library
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
