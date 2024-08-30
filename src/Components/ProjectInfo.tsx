@@ -1,6 +1,5 @@
 // 1. Weather API
 // 2. Material UI, Tailwind CSS
-// 3. Github Submission
 
 import React, {useState} from 'react';
 

@@ -1,12 +1,16 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import ProjectInfo from './ProjectInfo';
+import ProjectInfo from './Components/ProjectInfo';
+import BackgroundImage from './Components/BackgroundImage';
+import ToggleSections from './Components/ToggleSections';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <ProjectInfo />
+      <BackgroundImage />
+      <ToggleSections />
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
