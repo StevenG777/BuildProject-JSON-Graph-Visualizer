@@ -5,11 +5,11 @@ const ToggleSections: React.FC = () => {
     const sectionArr: string[] = ['Section I', 'Section II', "Section III"];
 
     const handleTogglePrev = () => {
-        setSectionIndex((currentIndex) => (currentIndex + 1) % sectionArr.length);
+        setSectionIndex((currentIndex) => (currentIndex - 1 + sectionArr.length) % sectionArr.length);
     }
 
     const handleToggleNext = () => {
-        setSectionIndex((currentIndex) => (currentIndex - 1 + sectionArr.length) % sectionArr.length);
+        setSectionIndex((currentIndex) => (currentIndex + 1) % sectionArr.length);
     }
 
     return (

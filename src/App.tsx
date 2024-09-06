@@ -1,31 +1,28 @@
-import React from 'react';
-// import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 import ProjectInfo from './Components/ProjectInfo';
 import BackgroundImage from './Components/BackgroundImage';
 import ToggleSections from './Components/ToggleSections';
+import TextEditor from './Components/TextEditor';
+import JSONView from './Components/JSONView';
 
 const App: React.FC = () => {
+  // Save the data as a prop pass from <TextEditor>
+  // Save the data pass as a prop to <ProjectInfo>
+  const [newTitle, setNewTitle] = useState("");
+
+  // Use it to communicate between <TextEditor> and <App>
+  const sendDataFromChild = (data: string) => {
+    setNewTitle(data);
+  }
+
   return (
     <div className="App">
-      <ProjectInfo />
+      <ProjectInfo title= {newTitle} />
       <BackgroundImage />
       <ToggleSections />
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <TextEditor sendDataToParent={sendDataFromChild}/>
+      <JSONView/>
     </div>
   );
 }
