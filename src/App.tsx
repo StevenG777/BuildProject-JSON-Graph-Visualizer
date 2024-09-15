@@ -1,28 +1,44 @@
-import React, {useState} from 'react';
+// 1. Weather API
+// 2. Material UI, Tailwind CSS, Chart.js, D3.js, Cytoscape.js
+
+import React from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from 'react-router-dom'
 import './App.css';
-import ProjectInfo from './Components/ProjectInfo';
-import BackgroundImage from './Components/BackgroundImage';
-import ToggleSections from './Components/ToggleSections';
-import TextEditor from './Components/TextEditor';
-import JSONView from './Components/JSONView';
+import Navigation from './Components/Navigation';
+import HomePage from './Components/HomePage';
+import JSONRenderPage from './Components/JSONRenderPage';
+import ErrorPage from './Components/ErrorPage';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: < Navigation />,
+    errorElement: < ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "/home",
+        element: <HomePage />,
+      },
+      {
+        path: "/json-render",
+        element: <JSONRenderPage />,
+      },
+    ],
+  }
+]);
 
 const App: React.FC = () => {
-  // Save the data as a prop pass from <TextEditor>
-  // Save the data pass as a prop to <ProjectInfo>
-  const [newTitle, setNewTitle] = useState("");
-
-  // Use it to communicate between <TextEditor> and <App>
-  const sendDataFromChild = (data: string) => {
-    setNewTitle(data);
-  }
-
+  // Return App element includes Navigation element includes children elements HomePage & JSONRenderPage
   return (
     <div className="App">
-      <ProjectInfo title= {newTitle} />
-      <BackgroundImage />
-      <ToggleSections />
-      <TextEditor sendDataToParent={sendDataFromChild}/>
-      <JSONView/>
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -1,19 +1,26 @@
 import React from 'react';
+import { Box, Typography } from '@mui/material';
 
-const BackgroundImage: React.FC = () => {
-    // Image Url
-    const image_url = '../../public/BackgroundImage.jpg';
+const BackgroundImage: React.FC = (): JSX.Element => {
+    // Image Source URL
+    const imageUrl = 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg';
 
-    // Redirect to original image url
-    const image_source_url = 'https://www.pexels.com/photo/island-during-golden-hour-and-upcoming-storm-1118873/';
+    // Image Website Source URL for linking
+    const imageSourceUrl = 'https://www.pexels.com/photo/island-during-golden-hour-and-upcoming-storm-1118873/';
 
+    // Render Element
     return (
-        <div>
-            <a href={image_source_url} target="_blank">
-                <img src={image_url} alt="Weather Picture" width="500" height="500"/>
-            </a>
-        </div>
+        <Box>
+            <Typography variant='h5'> Image </Typography>
+            {imageUrl ? (
+                <a href={imageSourceUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={imageUrl} alt="Weather Picture" width="500" height="500"/>
+                </a>
+            ) : (
+                <Typography variant='h6'> Loading </Typography>
+            )}
+        </Box>
     );
-}
+};
 
 export default BackgroundImage;

@@ -1,23 +1,25 @@
-// 1. Weather API
-// 2. Material UI, Tailwind CSS, Chart.js, D3.js, Cytoscape.js
+import React, {useState} from 'react';
+import { Button, Typography, Box } from '@mui/material';
 
-import {useState} from 'react';
-
-interface titleInterface {
-    title: string
+// Interface for title data
+interface propsInterface {
+    title: string;
 }
 
-const ProjectInfo = <T extends titleInterface>({ title }: T) => {
+const ProjectInfo: React.FC<propsInterface> = ({ title }: propsInterface): JSX.Element => {
+    // Use State for count
     const [count, setCount] = useState(0);
 
+    // Render Element
     return (
-       <div>
-            <h1> {title} </h1>
-            <h2> Baixi Guo </h2>
-            <p> Counts: {count >= 0? count: 0} </p>
-            <button onClick = {() => setCount(count + 1)}> Increment + </button>
-            <button onClick = {() => setCount(count - 1)}> Decrement - </button>
-       </div>
+       <Box>
+            <Typography variant='h3'> {title} </Typography>
+            <Typography variant='h6'> By Baixi Guo </Typography>
+
+            <Typography variant='h5'> Counts: {count >= 0? count: 0} </Typography>
+            <Button variant='contained' onClick={() => setCount(() => count === 0? 0: count - 1)}> Decrement - </Button>
+            <Button variant='contained' onClick={() => setCount(() => count + 1)}>                 Increment + </Button>            
+       </Box>
     );
 };
 
