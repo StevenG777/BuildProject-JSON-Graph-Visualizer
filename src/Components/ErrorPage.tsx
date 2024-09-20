@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouteError } from "react-router-dom";
-import { Container, Typography, Box, Button } from '@mui/material';
+import { Typography, Box, Button } from '@mui/material';
 
 const ErrorPage: React.FC = (): JSX.Element => {
   const error: any = useRouteError();
@@ -21,7 +21,7 @@ const ErrorPage: React.FC = (): JSX.Element => {
         <Typography variant="h1" gutterBottom>
           Oops!
         </Typography>
-        <Typography variant="h6" paragraph>
+        <Typography variant="h6">
           Sorry, an unexpected error has occurred.
         </Typography>
         <Typography variant="body1">

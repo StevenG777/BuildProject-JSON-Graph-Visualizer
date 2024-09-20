@@ -14,6 +14,9 @@ const Navigation: React.FC = (): JSX.Element => {
                         <li>
                             <Link to={`json-render`}> Graph UI JSON Render </Link>
                         </li>
+                        <li>
+                            <Link to={`test`}> Tree Structure Testing </Link>
+                        </li>
                     </ul>
                 </nav>
             </div>

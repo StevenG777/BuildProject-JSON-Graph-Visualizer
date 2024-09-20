@@ -14,7 +14,7 @@ const BackgroundImage: React.FC = (): JSX.Element => {
             <Typography variant='h5'> Image </Typography>
             {imageUrl ? (
                 <a href={imageSourceUrl} target="_blank" rel="noopener noreferrer">
-                    <img src={imageUrl} alt="Weather Picture" width="500" height="500"/>
+                    <img src={imageUrl} alt="Weather" width="500" height="500"/>
                 </a>
             ) : (
                 <Typography variant='h6'> Loading </Typography>

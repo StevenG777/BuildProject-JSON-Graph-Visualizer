@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { StyledEngineProvider } from '@mui/material/styles';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 // Root renders the React Components
 root.render(
   <React.StrictMode>
-    <App />
+    <StyledEngineProvider>
+      <App />
+    </StyledEngineProvider>
   </React.StrictMode>
 );
 

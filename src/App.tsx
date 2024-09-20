@@ -1,5 +1,5 @@
-// 1. Weather API
-// 2. Material UI, Tailwind CSS, Chart.js, D3.js, Cytoscape.js
+// Weather API
+// D3.js
 
 import React from 'react';
 import {
@@ -10,6 +10,7 @@ import './App.css';
 import Navigation from './Components/Navigation';
 import HomePage from './Components/HomePage';
 import JSONRenderPage from './Components/JSONRenderPage';
+import TestingPage from './Components/TestingPage';
 import ErrorPage from './Components/ErrorPage';
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/json-render",
         element: <JSONRenderPage />,
+      },
+      {
+        path: "/test",
+        element: <TestingPage />,
       },
     ],
   }
