@@ -14,7 +14,7 @@
 - **Collapse All**: Collapse all the levels of JSON hierarchy in the visualization
 - **Clear Data**: Clear the JSON content
 - Future Development:
-  - **Visualize2**: Visualization using D3 Tidy Tree/Clustering Tree
+  - **More Visualize**: Visualization using D3 Tidy Tree/Clustering Tree
   - **Live Server Deployment**: Deploy to live service with choices of Glitch, Netlify or Render
   - **Data Persistence**: Store the data using a key-value store or a document-oriented database
 
@@ -56,7 +56,12 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
 
 ### About My Source Code
 - [**Public/**](): 
-
 ### About Building React App
 3. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 4. To learn React, check out the [React documentation](https://reactjs.org/).
+
+## My Reflection on This Project
+The JSON Graph Visualizer is a project that I did under the guidance of my project leader Sanjeev Vijayara through the Build Project Program by Open Avenues. This is a rewarding experience not only because this web application provides a new perspective on displaying JSON data, but also gives me exposure to using Typescript, React Router, MaterialUI, and building a visualization application.
+
+The JSON Graph Visualizer has two pages: the Home page and the JSON viewer page. The Home contains several components that showcase my understanding on using React
+
