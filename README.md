@@ -15,8 +15,9 @@
 - **Clear Data**: Clear the JSON content
 - Future Development:
   - **More Visualize**: Visualization using D3 Tidy Tree/Clustering Tree
-  - **Live Server Deployment**: Deploy to live service with choices of Glitch, Netlify or Render
+  - **Live Server Deployment**: Deploy to live service with choices of Glitch, Netlify, or Render
   - **Data Persistence**: Store the data using a key-value store or a document-oriented database
+  - **State Management**: Manage states across components leveraging Redux
 
 ## Tech Stack
 - Front-end:
@@ -61,7 +62,12 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
 4. To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## My Reflection on This Project
-The JSON Graph Visualizer is a project that I did under the guidance of my project leader Sanjeev Vijayara through the Build Project Program by Open Avenues. This is a rewarding experience not only because this web application provides a new perspective on displaying JSON data, but also gives me exposure to using Typescript, React Router, MaterialUI, and building a visualization application.
+The JSON Graph Visualizer is a web application I developed under the guidance of [Sanjeev Vijayara](https://www.linkedin.com/in/sanjeev-vijayaraj/) through the Open Avenues Build Project Program. This project not only enhanced my skills in web development but also introduced me to new technologies like TypeScript, React Router, and Material UI.
 
-The JSON Graph Visualizer has two pages: the Home page and the JSON viewer page. The Home contains several components that showcase my understanding on using React
+The application has two main pages: the Home page and the JSON Viewer page. The Home page includes a customizable title, an image, a counter, and a toggle section. The JSON Viewer page features a file upload component that visualizes the hierarchical structure of JSON files using the Material UI Tree View. The Navigation Menu allows seamless transitions between these pages, demonstrating my proficiency in React, React Router, and Material UI.
 
+This experience has been invaluable in refining my understanding of TypeScript, particularly in declaring types and interfaces to minimize bugs caused by type errors. Additionally, Material UI streamlined the creation of aesthetically pleasing components. Leveraging my prior experience with React, I successfully built an industry-standard front-end application.
+
+Looking ahead, I plan to incorporate libraries like D3.js or Cytoscape.js to provide diverse visual perspectives on JSON data. I also aim to host the application on platforms such as Netlify or Render for public access. To enhance user experience, I will integrate a persistent data store, eliminating the need for repeated JSON uploads. As the application grows, I intend to use Redux for efficient state management.
+
+I am grateful to Sanjeev and the Open Avenues Build Project Program for their support and guidance. This project has significantly strengthened my web development skills, and I am excited to continue building more advanced features to create a seamless user experience.
