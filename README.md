@@ -6,7 +6,8 @@
 
 ## Functionalities
 - **Upload**: Upload JSON file to visualize its data
-- **Visualize**: Visualize the hierarchical structure of the JSON data using MaterialUI Tree View
+- **Visualize**: Visualize the hierarchical structure of the JSON data including the attribute names and data type using MaterialUI Tree View
+- **Hierarchical Level**: Inspect the hierarchical level of specific data attribute by hovering on it
 - **Expand**: Expand a specific level of JSON hierarchy in the visualization
 - **Expand All**: Expand all the levels of JSON hierarchy in the visualization
 - **Collapse**: Collapse a specific level of JSON hierarchy in the visualization
@@ -52,5 +53,10 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
 4. You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
-1. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-2. To learn React, check out the [React documentation](https://reactjs.org/).
+
+### About My Source Code
+- [**Public/**](): 
+
+### About Building React App
+3. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. To learn React, check out the [React documentation](https://reactjs.org/).
