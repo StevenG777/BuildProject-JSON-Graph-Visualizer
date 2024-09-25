@@ -32,15 +32,15 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
 ### Before running any script
 1.  Go to the project directory: `cd Your parent directory/Build-Project-JSON-Graph-Visualizer`
 
-### In Development Environment
+### In the Development Environment
 1. Runs the app in the development mode: `npm start`
 2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### In Testing Environment
+### In the Testing Environment
 1. Launches the test runner in the interactive watch mode: `npm test`
 2. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### In Production Environment
+### In the Production Environment
 1. Build the app for production to the `build` folder: `npm run build`
 2. It correctly bundles React in production mode and optimizes the build for the best performance.
 3. The build is minified and the filenames include the hashes.
@@ -56,7 +56,16 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
 ## Learn More
 
 ### About My Source Code
-- [**Public/**](): 
+- [**public/**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/public): Contains static assets
+  - [**index.html**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/public/index.html): Websites layout
+  - [**favicon.ico**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/public/favicon.ico): Browser tab icon image
+  - [**robot.txt**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/public/robots.txt): Rules for web crawlers and scrapers
+- [**src/**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src): Contains source code for react components
+    - [**index.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/index.tsx): Entry point of the React application, define the root component and attach it to HTML document
+    - [**index.css**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/index.css): Global styling for the whole application
+    - [**app.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/App.tsx): Define 
+ 
+
 ### About Building React App
 3. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 4. To learn React, check out the [React documentation](https://reactjs.org/).
