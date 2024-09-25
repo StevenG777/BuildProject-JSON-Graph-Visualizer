@@ -2,9 +2,10 @@ import React from 'react';
 import { Collapse, Tooltip } from '@mui/material';
 import { TreeItem2, TreeItem2Props, TreeItem2Label, treeItemClasses } from '@mui/x-tree-view';
 import { TransitionProps } from '@mui/material/transitions'  
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
-import DisabledByDefaultOutlinedIcon from '@mui/icons-material/DisabledByDefaultOutlined';
+import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
+import RemoveCircleRoundedIcon from '@mui/icons-material/RemoveCircleRounded';
+import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
+import AdjustRoundedIcon from '@mui/icons-material/AdjustRounded';
 import { useSpring, animated } from '@react-spring/web'
 import { styled, alpha } from '@mui/material/styles';
 
@@ -63,9 +64,9 @@ const CustomTreeItem2 = React.forwardRef(
                 // Include all slots (Customizations)
                 slots={{
                     groupTransition: TransitionComponent,
-                    expandIcon: AddBoxIcon,
-                    collapseIcon: IndeterminateCheckBoxIcon,
-                    endIcon: DisabledByDefaultOutlinedIcon,
+                    expandIcon: AddCircleRoundedIcon,
+                    collapseIcon: RemoveCircleRoundedIcon,
+                    endIcon: AdjustRoundedIcon,
                     label: CustomLabel,
                     ...props.slots
                 }}
