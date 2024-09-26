@@ -60,12 +60,21 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
   - [**robot.txt**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/public/robots.txt): Rules for web crawlers and scrapers
 - [**src/**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src): Contains source code for react components
   - [**index.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/index.tsx): Entry point of the React application, define the root component and attach it to HTML document
-[**index.css**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/index.css): Global styling for the whole application
+  - [**index.css**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/index.css): Global styling for the whole application
   - [**app.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/App.tsx): Define the routing to Home page and JSON Viewer page components
   - [**app.css**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/App.css): Glocal styling for the main components
-  - [**components/**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src/Components): Contains children components under Home page and JSON Viewer page
-    - 
- 
+  - [**Components/**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src/Components): Contains children components under Home page and JSON Viewer page
+      - [**Navigation.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/Navigation.tsx): Navigate between Home and JSON Render page
+      - [**HomePage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/HomePage.tsx): Contains Home page components
+        - [**ProjectInfo.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/ProjectInfo.tsx): A Home page component that displays the title, my name, and number counter
+        - [**BackgroundImage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/BackgroundImage.tsx): A Home page component that displays the background image
+        - [**ToggleSections.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/ToggleSections.tsx): A Home page component that transitions to the next or previous text
+        - [**TextEditor.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/TextEditor.tsx): A Home page component that allows you to customize the title
+      - [**JSONRenderPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONRenderPage.tsx): Contains JSON Render page components
+        - [**FileUpload.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/FileUpload.tsx): A JSON Render page component that allows you to upload JSON file
+        - [**JSONView.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONView.tsx): A JSON Render page component that defines the Depth First Search (DFS) algorithm that recursively renders each level of data in the hierarchical structure
+          - [**JSONMUITreeView.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONMUITree.tsx): A JSON Render page component used to render UI elements within the **JSONView.tsx**
+      - [**ErrorPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/ErrorPage.tsx): Contains error information whenever routing encounters issues
 
 ### About Building React App
 3. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
