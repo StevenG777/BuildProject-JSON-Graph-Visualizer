@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Container, Typography, Paper, CircularProgress, Button } from '@mui/material';
+import { Container, Typography, Paper, Button } from '@mui/material';
 import { SimpleTreeView } from '@mui/x-tree-view/SimpleTreeView';
 import JSONMUITree from './JSONMUITree';
 
@@ -89,7 +89,7 @@ interface propsInterface {
     jsonData: any;
 }
 
-const JSONView: React.FC<propsInterface> = ({ jsonData }: propsInterface): JSX.Element => {
+const JSONRecursiveMUITree: React.FC<propsInterface> = ({ jsonData }: propsInterface): JSX.Element => {
     const [localJsonData, setLocalJsonData] = React.useState<any>(jsonData);
     const [lastSelectedItem, setLastSelectedItem] = React.useState<string | null>(null);
     const [lastExpandItem, setLastExpandItem] = React.useState<string | null>(null);
@@ -141,17 +141,13 @@ const JSONView: React.FC<propsInterface> = ({ jsonData }: propsInterface): JSX.E
         setLocalJsonData(null);
     }
 
-    // Render element
+    // Render Recursive MUI Tree element
     return (
         <Container
-        sx={{
-            padding: '20px',
-            marginTop: '20px',
-        }}>
-            <Typography variant="h4" gutterBottom>
-                JSON Data Viewer
-            </Typography>
-
+            sx={{
+                padding: '20px',
+                marginTop: '20px',
+            }}>
             { localJsonData ? (
                 <Paper elevation={3} sx={{
                     padding: '20px',
@@ -172,51 +168,52 @@ const JSONView: React.FC<propsInterface> = ({ jsonData }: propsInterface): JSX.E
                     </Typography>
                             
                     <Button onClick={handleExpandClick}>
-                            {expandedItems.length === 0 ? 'Expand all' : 'Collapse all'}
+                        {expandedItems.length === 0 ? 'Expand all' : 'Collapse all'}
                     </Button>
                 </Paper>
             ) : null }
 
-            <Paper 
-            elevation={3} 
-            sx={{
-                padding: '20px',
-                marginTop: '20px',
-            }}>
-                {localJsonData ? (
-                    <SimpleTreeView 
-                    multiSelect={true}
-                    checkboxSelection={true}
-                    onItemSelectionToggle={handleItemSelectionToggle}
-                    onItemExpansionToggle={handleItemExpansionToggle}
-                    onExpandedItemsChange={handleExpandedItemsChange}
-                    expandedItems={expandedItems}
-                    sx = {{
-                        textAlign: 'left', 
-                        whiteSpace: 'pre-wrap', 
-                        wordBreak: 'break-word',
-                        fontFamily: 'monospace', 
-                        fontSize: '14px' 
+            { localJsonData ? (
+                <Paper 
+                    elevation={3} 
+                    sx={{
+                        padding: '20px',
+                        marginTop: '20px',
                     }}
+                >
+                    <SimpleTreeView 
+                        multiSelect={true}
+                        checkboxSelection={true}
+                        onItemSelectionToggle={handleItemSelectionToggle}
+                        onItemExpansionToggle={handleItemExpansionToggle}
+                        onExpandedItemsChange={handleExpandedItemsChange}
+                        expandedItems={expandedItems}
+                        sx = {{
+                            textAlign: 'left', 
+                            whiteSpace: 'pre-wrap', 
+                            wordBreak: 'break-word',
+                            fontFamily: 'monospace', 
+                            fontSize: '14px' 
+                        }}
                     > 
                         {renderJSON(jsonData)} 
                     </SimpleTreeView>
-                ) : (
-                    <CircularProgress />
-                )}
-            </Paper>
+                </Paper>
+            ) : null }
 
             { localJsonData ? (
                 <Paper 
-                elevation={0} 
-                sx={{
-                    padding: '20px',
-                    marginTop: '20px',
-                }}>
+                    elevation={0} 
+                    sx={{
+                        padding: '20px',
+                        marginTop: '20px',
+                    }}
+                >
                     <Button 
-                    onClick={handleClearContentClick} 
-                    variant="outlined" 
-                    color='error'> 
+                        onClick={handleClearContentClick} 
+                        variant="outlined" 
+                        color='error'
+                    > 
                         Clear Content 
                     </Button>
                 </Paper>
@@ -225,4 +222,4 @@ const JSONView: React.FC<propsInterface> = ({ jsonData }: propsInterface): JSX.E
     );
 };
 
-export default JSONView;
+export default JSONRecursiveMUITree;

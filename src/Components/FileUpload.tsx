@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 
 // Define interface for onFileUpload
 interface propsInterface {
@@ -58,8 +58,14 @@ const FileUpload: React.FC<propsInterface> = ({ onFileUpload } : propsInterface)
         }
     }
 
+    // Render File Upload Elements
     return (
-        <div>
+        <Container
+            sx={{
+                marginTop: '20px',
+                padding: '20px'
+            }}
+        >
             <Button 
             variant="contained"
             component="label"
@@ -75,7 +81,7 @@ const FileUpload: React.FC<propsInterface> = ({ onFileUpload } : propsInterface)
                 </input>
                 
             </Button>
-        </div>
+        </ Container>
     );
 };
 

@@ -9,7 +9,7 @@ import {
 import './App.css';
 import Navigation from './Components/Navigation';
 import HomePage from './Components/HomePage';
-import JSONRenderPage from './Components/JSONRenderPage';
+import JSONHierarchyViewPage from './Components/JSONHierarchyViewPage';
 import TestingPage from './Components/TestingPage';
 import ErrorPage from './Components/ErrorPage';
 
@@ -28,8 +28,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/json-render",
-        element: <JSONRenderPage />,
+        path: "/json-hierarchy-view",
+        element: <JSONHierarchyViewPage />,
       },
       {
         path: "/test",

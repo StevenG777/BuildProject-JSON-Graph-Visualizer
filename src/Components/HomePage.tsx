@@ -59,7 +59,12 @@ const HomePage: React.FC = (): JSX.Element => {
     
     // Render Home Page Elements
     return (
-        <Box className='HomePage' display='flex' flexDirection='column'>
+        <Box 
+            className='HomePage' 
+            display='flex' 
+            flexDirection='column' 
+            sx={{color:'black'}}
+        >
             {/* Dynamically render components */}
             {components.map(({ id, Component, props }, index) => (
                 <Box key={id} border="1px solid gray" p={2} m={2}>
