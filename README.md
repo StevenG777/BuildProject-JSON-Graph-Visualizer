@@ -7,6 +7,7 @@
 ## Functionalities
 - **Upload**: Upload JSON file to visualize its data
 - **Visualize**: Visualize the hierarchical structure of the JSON data including the attribute names and data type using MaterialUI Tree View
+- **More Visualize**: Visualization using D3 Tidy Tree/Clustering Tree
 - **Hierarchical Level**: Inspect the hierarchical level of specific data attribute by hovering on it
 - **Expand**: Expand a specific level of JSON hierarchy in the visualization
 - **Expand All**: Expand all the levels of JSON hierarchy in the visualization
@@ -14,8 +15,7 @@
 - **Collapse All**: Collapse all the levels of JSON hierarchy in the visualization
 - **Clear Data**: Clear the JSON content
 - Future Development:
-  - **More Visualize**: Visualization using D3 Tidy Tree/Clustering Tree
-  - **Live Server Deployment**: Deploy to live service with choices of Glitch, Netlify, or Render
+  - **Live Server Deployment**: Deploy to live service with choices of Glitch, Netlify, or Hierarchy
   - **Data Persistence**: Store the data using a key-value store or a document-oriented database
   - **State Management**: Manage states across components leveraging Redux
 
@@ -24,6 +24,7 @@
   - HTML, CSS, Typescript, JSX
   - React, React-router, React-spring
   - MaterialUI
+  - D3.js
 
 ## Available Scripts
 
@@ -64,16 +65,18 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
   - [**app.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/App.tsx): Define the routing to Home page and JSON Viewer page components
   - [**app.css**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/App.css): Glocal styling for the main components
   - [**Components/**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src/Components): Contains children components under Home page and JSON Viewer page
-      - [**Navigation.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/Navigation.tsx): Navigate between Home and JSON Render page
+      - [**Navigation.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/Navigation.tsx): Navigate between Home and JSON Hierarchy page
       - [**HomePage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/HomePage.tsx): Contains Home page components
         - [**ProjectInfo.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/ProjectInfo.tsx): A Home page component that displays the title, my name, and number counter
         - [**BackgroundImage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/BackgroundImage.tsx): A Home page component that displays the background image
         - [**ToggleSections.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/ToggleSections.tsx): A Home page component that transitions to the next or previous text
         - [**TextEditor.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/TextEditor.tsx): A Home page component that allows you to customize the title
-      - [**JSONRenderPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONRenderPage.tsx): Contains JSON Render page components
-        - [**FileUpload.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/FileUpload.tsx): A JSON Render page component that allows you to upload JSON file
-        - [**JSONView.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONView.tsx): A JSON Render page component that defines the Depth First Search (DFS) algorithm that recursively renders each level of data in the hierarchical structure
-          - [**JSONMUITreeView.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONMUITree.tsx): A JSON Render page component used to render UI elements within the **JSONView.tsx**
+      - [**JSONHierarchyViewPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONHierarchyViewPage.tsx): Contains JSON Hierarchy page components
+        - [**FileUpload.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/FileUpload.tsx): A JSON Hierarchy page component that allows you to upload JSON file
+        - [**JSONRecursiveMUITree.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONRecursiveMUITree.tsx): A JSON Hierarchy page component that defines the Depth First Search (DFS) algorithm that recursively Hierarchys each level of data in the hierarchical structure
+          - [**JSONMUITreeView.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/JSONMUITree.tsx): A JSON Hierarchy page component used to Hierarchy UI elements within the **JSONView.tsx**
+        - [**JSOND3TidyTree.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src/Components): A JSON Hierarchy page component that render data hierarchys using D3.js
+      - [**TestingPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/TestingPage.tsx): Used for new feature testing
       - [**ErrorPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/ErrorPage.tsx): Contains error information whenever routing encounters issues
 
 ### About Building React App
@@ -87,6 +90,6 @@ The application has two main pages: the Home page and the JSON Viewer page. The 
 
 This experience has been invaluable in refining my understanding of TypeScript, particularly in declaring types and interfaces to minimize bugs caused by type errors. Additionally, Material UI streamlined the creation of aesthetically pleasing components. Leveraging my prior experience with React, I successfully built an industry-standard front-end application.
 
-Looking ahead, I plan to incorporate libraries like D3.js or Cytoscape.js to provide diverse visual perspectives on JSON data. I also aim to host the application on platforms such as Netlify or Render for public access. To enhance user experience, I will integrate a persistent data store, eliminating the need for repeated JSON uploads. As the application grows, I intend to use Redux for efficient state management.
+Looking ahead, I plan to incorporate libraries like D3.js or Cytoscape.js to provide diverse visual perspectives on JSON data. I also aim to host the application on platforms such as Netlify or Hierarchy for public access. To enhance user experience, I will integrate a persistent data store, eliminating the need for repeated JSON uploads. As the application grows, I intend to use Redux for efficient state management.
 
 I am grateful to Sanjeev and the Open Avenues Build Project Program for their support and guidance. This project has significantly strengthened my web development skills, and I am excited to continue building more advanced features to create a seamless user experience.
