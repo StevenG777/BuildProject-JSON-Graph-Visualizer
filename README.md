@@ -78,6 +78,8 @@ In the project directory, you can run the JSON Graph Visualizer App in the follo
         - [**JSOND3TidyTree.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src/Components): A JSON Hierarchy page component that render data hierarchys using D3.js
       - [**TestingPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/TestingPage.tsx): Used for new feature testing
       - [**ErrorPage.tsx**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Components/ErrorPage.tsx): Contains error information whenever routing encounters issues
+  - [**Utilities/**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/tree/main/src/Utilities): Contains utility function used by components
+    - [**jsonToD3Hierarchy**](https://github.com/StevenG777/BuildProject-JSON-Graph-Visualizer/blob/main/src/Utilities/jsonToD3Hierarchy.ts): Convert JSON data to D3 acceptable formatted object used by **JSOND3TidyTree.tsx**
 
 ### About Building React App
 3. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
